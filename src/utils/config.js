@@ -11,13 +11,13 @@ export default {
     const env = process.env.REACT_APP_ENV
     switch (env) {
       case 'staging': return {
-        default: 'staging.p2shop.cn:50261'
+        default: 'https://staging.p2shop.cn/bmapping'
       };
       case 'production': return {
-        default: 'https://staging.p2shop.cn/shopgreen'
+        default: 'https://staging.p2shop.cn/bmapping'
       };
       default: return {
-        default: 'staging.p2shop.cn:50261'
+        default: 'https://staging.p2shop.cn/bmapping'
       };
     }
   })();
