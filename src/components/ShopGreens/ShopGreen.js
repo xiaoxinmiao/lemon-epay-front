@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'dva';
 import { routerRedux } from 'dva/router';
-import { Table, Pagination, Popconfirm, Button } from 'antd';
+import { Table, Pagination, Popover, Button } from 'antd';
 import styles from './ShopGreen.css';
 import { PAGE_SIZE } from '../../constants';
+var QRCode = require('qrcode.react');
 
 
 function ShopGreen({ dispatch, list: dataSource, loading, total, page: current }) {
@@ -12,7 +13,7 @@ function ShopGreen({ dispatch, list: dataSource, loading, total, page: current }
       pathname: '/shopGreen',
       query: { page },
     }));
-  }
+  }  
 
   const columns = [
     {
@@ -20,17 +21,13 @@ function ShopGreen({ dispatch, list: dataSource, loading, total, page: current }
       dataIndex: 'id',
       key: 'id',
     },{
-      title: 'ShopEpayId',
-      dataIndex: 'shop_epay_id',
-      key: 'shop_epay_id',
-    },{
       title: 'ShopCode',
-      dataIndex: 'shop_code',
-      key: 'shop_code',
+      dataIndex: 'code',
+      key: 'code',
     },{
         title: 'ShopName',
-        dataIndex: 'shop_name',
-        key: 'shop_name',
+        dataIndex: 'name',
+        key: 'name',
     },{
         title: 'QrUrl',
         dataIndex: 'qr_url',
@@ -43,9 +40,9 @@ function ShopGreen({ dispatch, list: dataSource, loading, total, page: current }
       title: 'Operation',
       key: 'operation',
       render: (text, History) => (
-        <span className={styles.operation}>
-          <a onClick={editHandler.bind(null, History.id)}>View</a>
-        </span>
+        <Popover content={<div>{History.qr_url==""?"No Url!":<QRCode value={History.qr_url} />}</div>} placement="right" trigger="hover">
+            <Button>QrCode</Button>
+        </Popover>
       ),
     },
   ];
