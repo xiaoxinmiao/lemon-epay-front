@@ -65,7 +65,7 @@ class EHubLayout extends Component {
                     collapsed={this.state.collapsed}
                     onCollapse={this.onCollapse}>
                     <div style={this.state.collapsed ? collapsedLogoStyle : logoStyle}>
-                        eHub
+                        iPay
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={[this.props.menu.selectedKey]} mode="inline">
                         {this.props.menu.items.map(function(item, idx){
@@ -130,7 +130,7 @@ class EHubLayout extends Component {
                     {/* Footer Strart */}
                     <Footer className={styles['footer-align']}>
                         <p>
-                            eHub ©2017 Created by Beer Design
+                            iPay ©2017 Created by Beer Design
                         </p>
                         <p>
                             Code Generate by Admin CRUD Scaffold v.0.3.2
