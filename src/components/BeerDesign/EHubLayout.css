@@ -1,0 +1,41 @@
+.logo {
+    height: 32px;
+    margin: 16px;
+    border-radius: 6px;
+    background: #333;
+    color: #919191;
+    font-size: 1.375em;
+    line-height: 32px;
+    text-align: center;
+}
+.ant-layout-sider-collapsed .logo {
+    font-size: 0;
+}
+.user-information-domain {
+    background: #fff;
+    padding: 0;
+}
+.user-information-domain .box1 {
+    float: right;
+    margin-right: 24px;
+}
+.user-information-domain .guide,
+.user-information-domain .user-profile,
+.user-information-domain .user-name,
+.user-information-domain .user-login {
+    margin-right: 12px;
+}
+.container-wrapper {
+    margin: 0 16px;
+}
+.current-info {
+    margin: 12px 0;
+}
+.contents-wrapper {
+    min-height: 520px;
+    padding: 24px;
+    background-color: #fff;
+}
+.footer-align {
+    text-align: center;
+}
