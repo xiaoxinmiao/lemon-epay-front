@@ -25,7 +25,7 @@ function Pay({ pay, dispatch }) {
             </div>
         );
     } else if (UA.match(/MicroMessenger\//i)) {
-        // window.location = "https://gateway.p2shop.cn/wxapi-service-api/WxCode/Index?myPageUrl=http://www.baidu.com?a=1";
+        // window.location = "https://gateway.p2shop.com.cn/wxapi-service-api/WxCode/Index?myPageUrl=http://www.baidu.com?a=1";
         const openId = "os2u9uPKLkCKL08FwCM6hQAQ_LtI";
         return (
             <div className={styles.divMain} >

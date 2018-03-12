@@ -4,7 +4,7 @@ import { backendAddr } from '../utils/config';
 
 export function prepay({ eid = 1, payAmt,openId}) {
 
-    return request('https://staging.p2shop.cn/ipay/v3/wx/prepay',
+    return request('https://staging.p2shop.com.cn/ipay/v3/wx/prepay',
         {
             method: 'POST',
             headers: {
